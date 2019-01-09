@@ -24,7 +24,7 @@ The basics of how it works is as follows:
 
 There are two heatmap gifs in the project which demonstrate the probability matrix for every square after each move in the game. Here is one of them:
 
-![heatmap](https://github.com/DataSnaek/battleships_ai/blob/master/heatmap_gifs/battleships_2.gif) "Heatmap")
+![heatmap](https://github.com/DataSnaek/battleships_ai/blob/master/heatmap_gifs/battleships_2.gif)
 
 ## Prerequisites
 
