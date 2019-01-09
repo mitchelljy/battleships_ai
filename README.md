@@ -11,18 +11,19 @@ unsuccessful in this goal so far. If anyone reading this has any ideas of how to
 
 ### Description
 
-The basics of how it works is as follows:
+The basics of how it works are as follows:
 
 1. Take current board state as input
 2. Create copy of board state
 3. Simulate a specific number of samples (given by `--monte_carlo_samples`), each of which is a random placement of a remaining ship type
-4. Sum and average the number of ship tiles for each square across every sample to get a frequency matrix containing a probability of a ship for each square, emphasise ship samples that overlap existing hits
+4. Stack all of the simulations and sum the total number of ships in each square (emphasise ships that overlap existing hits)
+5. Take the mean for each sqaure, giving us a frequency matrix or heatmap
 5. Pick the largest value corresponding to a legal move in the matrix
 6. Repeat
 
 ### Heatmap
 
-There are two heatmap gifs in the project which demonstrate the probability matrix for every square after each move in the game. Here is one of them:
+[There are two heatmap gifs](https://github.com/DataSnaek/battleships_ai/tree/master/heatmap_gifs) in this project which demonstrate the probability matrix as a heatmap for every square after each move in the game. Here is one of them:
 
 ![heatmap](https://github.com/DataSnaek/battleships_ai/blob/master/heatmap_gifs/battleships_2.gif)
 
@@ -30,9 +31,9 @@ There are two heatmap gifs in the project which demonstrate the probability matr
 
 ### Packages
 
-Done entirely using the python standard library, with the exception of `numpy` which is required.
+Done entirely using the `python 3.6` standard library, with the exception of `numpy` which is required.
 
-### Intructions
+### Instructions
 
 The `main.py` file takes 3 arguments as follows:
 
@@ -42,4 +43,8 @@ The `main.py` file takes 3 arguments as follows:
 
 If you have a slow computer, choose a lower number of samples, but generally 10,000 should get good results in decent time. 
 Make sure not to put spaces between the integers in ship_sizes. 
-Extemely large or small board sizes may have unexpected behaviour, generally the safe range is 5-10, but with appropriate adjustments to the other parameters, sixes outwith this range will work fine.
+Extemely large or small board sizes may have unexpected behaviour, generally the safe range is 5-10, but with appropriate adjustments to the other parameters, sizes outwith this range will work fine.
+
+## License
+
+This project is released under the MIT license, see LICENSE.md for more details.
