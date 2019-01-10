@@ -45,6 +45,16 @@ If you have a slow computer, choose a lower number of samples, but generally 10,
 Make sure not to put spaces between the integers in ship_sizes. 
 Extemely large or small board sizes may have unexpected behaviour, generally the safe range is 5-10, but with appropriate adjustments to the other parameters, sizes outwith this range will work fine.
 
+Once run, the game will initialise two boards of ships randomly (choosing ship locations is not implemented currently), one for you and one for the computer. The key for square types is as follows:
+
+* Sea: ■
+* Hit: X
+* Miss: □
+* Destroyed: *
+
+The player goes first and specifies a move by givjng first a letter and then a number to determine the target square.
+
+
 ## License
 
 This project is released under the MIT license, see LICENSE.md for more details.
