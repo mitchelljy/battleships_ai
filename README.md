@@ -52,7 +52,7 @@ Once run, the game will initialise two boards of ships randomly (choosing ship l
 * Miss: □
 * Destroyed: *
 
-The player goes first and specifies a move by givjng first a letter and then a number to determine the target square.
+The player goes first and specifies a move by giving first a letter and then a number to determine the target square.
 
 
 ## License
